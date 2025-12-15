@@ -4,12 +4,13 @@ import re
 from trendyol_monitor.items import TrendyolMonitorItem
 from datetime import datetime
 
-
+print("URL'in doğru olduğundan emin olun.")
+search_url = input("Search for the product type you want to find in the Trendyol search box and paste the URL you are directed to: ")
 class TrendyolSpider(scrapy.Spider):
     # HİBRİT MİMARİ
     name = "trendyol_spider"
     allowed_domains = ["www.trendyol.com"]
-    start_urls = ["https://www.trendyol.com/sr?q=gaming%20laptop&qt=gaming%20laptop&st=gaming%20laptop&os=1"]
+    start_urls = [search_url]
 
     def start_requests(self):
         for url in self.start_urls:
