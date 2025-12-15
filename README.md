@@ -68,7 +68,7 @@ pip install -r requirements.txt
 playwright install
 
 # The project is based on Chromium. If you prefer, you can choose to install only Chromium.
-pip install chromium
+playwright install chromium
 ```
 ---
 
